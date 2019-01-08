@@ -18,6 +18,9 @@ public class Author {
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
+    
+    public Author() {
+    }
 
     public Long getId() {
         return id;
@@ -36,7 +39,7 @@ public class Author {
     }
 
     @PreUpdate
-    private void onUpdate(){
+    private void onUpdate() {
         this.updatedAt = LocalDateTime.now();
     }
 }
